@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldPayPlace</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div class="header_logo">
+                <img src="./src/Logo.svg" alt="logotype" onclick="document.location='./index.html'">
+            </div>
+            <div class="btn_header">
+                <button class="btn_login" onclick="document.location='./login.html'">Log in</button>
+            </div>
+        </div>
+        <button class="cart" id="cart">
+            <img class="cart__image" src="./src/cart.svg" alt="Cart" />
+            <div class="cart__num" id="cart_num">0</div>
+        </button>
+        <div class="popup">
+            <div class="popup__container" id="popup_container">
+              <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+              </div>
+              <div class="popup__item" id="popup_product_list">
+                <div class="popup__product">
+                  <div class="popup__product-wrap">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network_cam"
+                      class="popup__product-image"
+                    />
+                    <h2 class="popup__product-title">
+                      Вебкамера Urus2022Anti404Land
+                    </h2>
+                  </div>
+                  <div class="popup__product-wrap">
+                    <div class="popup__product-price">135000</div>
+                    <button class="popup__product-delete">✖</button>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__item">
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого</h2>
+                  <output class="popup__cost-value" id="popup_cost">150000</output>
+                </div>
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Скидка</h2>
+                  <output class="popup__cost-value" id="popup_discount">15000</output>
+                </div>
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого со скидкой</h2>
+                  <output class="popup__cost-value" id="popup_cost_discount">135000</output>
+                </div>
+              </div>
+              <button class="popup__close" id="popup_close">✖</button>
+            </div>
+          </div>  
+    </header>
+    <main>
+        <div class="block_search">
+            <input type="text" class="input_text">
+            <button class="btn_search"><img src="./src/free-icon-search-2414255 1.svg" alt="search"></button>
+        </div>
+            <div class="thousendyearsraich">
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Pineapple</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Wierd</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Made in Russia</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Made in China</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Made in Vietmin</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Made in North Korea</button>
+                <button class="thousendyearsraich_btn" onclick="document.location='./search.html'">Made in Iran</button>
+            </div>
+            <!-- <div class="block_top_this_week">
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bye_v1">
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                    <div class="block_bye_v11">
+                        <div class="block_bye_tittle">
+                            <h4>Webcam MN4331</h4>
+                            <img src="./src/Rectangle 11.svg" alt="">
+                        </div>
+                        <div class="blocK_bye_sub_tittle">
+                            <p>Most popular <br> webcam <br> 1144x1080 px</p>
+                            <p>$42.3</p>
+                            <button class="btn_bye">Bye</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="cards">
+            <!-- Карточка товара -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+            <!-- Карточка товара .. -->
+            <div class="card">
+                <!-- Верхняя часть -->
+                <div class="card__top">
+                  <!-- Изображение-ссылка товара -->
+                  <a href="#" class="card__image">
+                    <img
+                      src="./src/network-cam.svg"
+                      alt="network-cam"
+                    />
+                  </a>
+                  <!-- Скидка на товар -->
+                  <div class="card__label">-10%</div>
+                </div>
+                <!-- Нижняя часть -->
+                <div class="card__bottom">
+                  <!-- Цены на товар (с учетом скидки и без)-->
+                  <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                  </div>
+                  <!-- Ссылка-название товара -->
+                  <a href="#" class="card__title">
+                    Вебкамера Urus2022Anti404Land
+                  </a>
+                  <!-- Кнопка добавить в корзину -->
+                  <button class="card__add">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <!-- Карточка товара .. -->
+                <div class="card">
+                    <!-- Верхняя часть -->
+                    <div class="card__top">
+                      <!-- Изображение-ссылка товара -->
+                      <a href="#" class="card__image">
+                        <img
+                          src="./src/network-cam.svg"
+                          alt="network-cam"
+                        />
+                      </a>
+                      <!-- Скидка на товар -->
+                      <div class="card__label">-10%</div>
+                    </div>
+                    <!-- Нижняя часть -->
+                    <div class="card__bottom">
+                      <!-- Цены на товар (с учетом скидки и без)-->
+                      <div class="card__prices">
+                        <div class="card__price card__price--discount">135 000</div>
+                        <div class="card__price card__price--common">150 000</div>
+                      </div>
+                      <!-- Ссылка-название товара -->
+                      <a href="#" class="card__title">
+                        Вебкамера Urus2022Anti404Land
+                      </a>
+                      <!-- Кнопка добавить в корзину -->
+                      <button class="card__add">В корзину</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <!-- Карточка товара .. -->
+                    <div class="card">
+                        <!-- Верхняя часть -->
+                        <div class="card__top">
+                          <!-- Изображение-ссылка товара -->
+                          <a href="#" class="card__image">
+                            <img
+                              src="./src/network-cam.svg"
+                              alt="network-cam"
+                            />
+                          </a>
+                          <!-- Скидка на товар -->
+                          <div class="card__label">-10%</div>
+                        </div>
+                        <!-- Нижняя часть -->
+                        <div class="card__bottom">
+                          <!-- Цены на товар (с учетом скидки и без)-->
+                          <div class="card__prices">
+                            <div class="card__price card__price--discount">135 000</div>
+                            <div class="card__price card__price--common">150 000</div>
+                          </div>
+                          <!-- Ссылка-название товара -->
+                          <a href="#" class="card__title">
+                            Вебкамера Urus2022Anti404Land
+                          </a>
+                          <!-- Кнопка добавить в корзину -->
+                          <button class="card__add">В корзину</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <!-- Карточка товара .. -->
+                        <div class="card">
+                            <!-- Верхняя часть -->
+                            <div class="card__top">
+                              <!-- Изображение-ссылка товара -->
+                              <a href="#" class="card__image">
+                                <img
+                                  src="./src/network-cam.svg"
+                                  alt="network-cam"
+                                />
+                              </a>
+                              <!-- Скидка на товар -->
+                              <div class="card__label">-10%</div>
+                            </div>
+                            <!-- Нижняя часть -->
+                            <div class="card__bottom">
+                              <!-- Цены на товар (с учетом скидки и без)-->
+                              <div class="card__prices">
+                                <div class="card__price card__price--discount">135 000</div>
+                                <div class="card__price card__price--common">150 000</div>
+                              </div>
+                              <!-- Ссылка-название товара -->
+                              <a href="#" class="card__title">
+                                Вебкамера Urus2022Anti404Land
+                              </a>
+                              <!-- Кнопка добавить в корзину -->
+                              <button class="card__add">В корзину</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                            <!-- Карточка товара .. -->
+                            <div class="card">
+                                <!-- Верхняя часть -->
+                                <div class="card__top">
+                                  <!-- Изображение-ссылка товара -->
+                                  <a href="#" class="card__image">
+                                    <img
+                                      src="./src/network-cam.svg"
+                                      alt="network-cam"
+                                    />
+                                  </a>
+                                  <!-- Скидка на товар -->
+                                  <div class="card__label">-10%</div>
+                                </div>
+                                <!-- Нижняя часть -->
+                                <div class="card__bottom">
+                                  <!-- Цены на товар (с учетом скидки и без)-->
+                                  <div class="card__prices">
+                                    <div class="card__price card__price--discount">135 000</div>
+                                    <div class="card__price card__price--common">150 000</div>
+                                  </div>
+                                  <!-- Ссылка-название товара -->
+                                  <a href="#" class="card__title">
+                                    Вебкамера Urus2022Anti404Land
+                                  </a>
+                                  <!-- Кнопка добавить в корзину -->
+                                  <button class="card__add">В корзину</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                                <!-- Карточка товара .. -->
+                                <div class="card">
+                                    <!-- Верхняя часть -->
+                                    <div class="card__top">
+                                      <!-- Изображение-ссылка товара -->
+                                      <a href="#" class="card__image">
+                                        <img
+                                          src="./src/network-cam.svg"
+                                          alt="network-cam"
+                                        />
+                                      </a>
+                                      <!-- Скидка на товар -->
+                                      <div class="card__label">-10%</div>
+                                    </div>
+                                    <!-- Нижняя часть -->
+                                    <div class="card__bottom">
+                                      <!-- Цены на товар (с учетом скидки и без)-->
+                                      <div class="card__prices">
+                                        <div class="card__price card__price--discount">135 000</div>
+                                        <div class="card__price card__price--common">150 000</div>
+                                      </div>
+                                      <!-- Ссылка-название товара -->
+                                      <a href="#" class="card__title">
+                                        Вебкамера Urus2022Anti404Land
+                                      </a>
+                                      <!-- Кнопка добавить в корзину -->
+                                      <button class="card__add">В корзину</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                    <!-- Карточка товара .. -->
+                                    <div class="card">
+                                        <!-- Верхняя часть -->
+                                        <div class="card__top">
+                                          <!-- Изображение-ссылка товара -->
+                                          <a href="#" class="card__image">
+                                            <img
+                                              src="./src/network-cam.svg"
+                                              alt="network-cam"
+                                            />
+                                          </a>
+                                          <!-- Скидка на товар -->
+                                          <div class="card__label">-10%</div>
+                                        </div>
+                                        <!-- Нижняя часть -->
+                                        <div class="card__bottom">
+                                          <!-- Цены на товар (с учетом скидки и без)-->
+                                          <div class="card__prices">
+                                            <div class="card__price card__price--discount">135 000</div>
+                                            <div class="card__price card__price--common">150 000</div>
+                                          </div>
+                                          <!-- Ссылка-название товара -->
+                                          <a href="#" class="card__title">
+                                            Вебкамера Urus2022Anti404Land
+                                          </a>
+                                          <!-- Кнопка добавить в корзину -->
+                                          <button class="card__add">В корзину</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                        <!-- Карточка товара .. -->
+                                        <div class="card">
+                                            <!-- Верхняя часть -->
+                                            <div class="card__top">
+                                              <!-- Изображение-ссылка товара -->
+                                              <a href="#" class="card__image">
+                                                <img
+                                                  src="./src/network-cam.svg"
+                                                  alt="network-cam"
+                                                />
+                                              </a>
+                                              <!-- Скидка на товар -->
+                                              <div class="card__label">-10%</div>
+                                            </div>
+                                            <!-- Нижняя часть -->
+                                            <div class="card__bottom">
+                                              <!-- Цены на товар (с учетом скидки и без)-->
+                                              <div class="card__prices">
+                                                <div class="card__price card__price--discount">135 000</div>
+                                                <div class="card__price card__price--common">150 000</div>
+                                              </div>
+                                              <!-- Ссылка-название товара -->
+                                              <a href="#" class="card__title">
+                                                Вебкамера Urus2022Anti404Land
+                                              </a>
+                                              <!-- Кнопка добавить в корзину -->
+                                              <button class="card__add">В корзину</button>
+                                            </div>
+                                          </div>
+                                        </div>
+</div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <p >WorldPayPlace</p>
+            <p>@corrupting by 2222</p>
+        </div>
+
+    </footer>
+</body>
+</html>
